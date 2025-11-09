@@ -5,7 +5,6 @@ import './App.css';
 
 // Splash screen component
 function SplashScreen() {
-  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
