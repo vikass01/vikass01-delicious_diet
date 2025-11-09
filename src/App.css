@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 } */
+
+
+
+.loading-text {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 2px;
+  animation: fadeInScale 1.5s ease-in-out infinite alternate;
+}
+
+/* logo animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* smooth fade and scale animation for text */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+

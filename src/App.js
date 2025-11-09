@@ -1,23 +1,50 @@
-// import logo from './logo.svg';
-import logo from './iconpng.png'
+import { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import logo from './iconpng.png';
 import './App.css';
 
-function App() {
+// Splash screen component
+function SplashScreen() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      window.location.href = process.env.PUBLIC_URL + '/delicious_diet.pdf';
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p> Delicious Diet </p>
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
+        <p className="loading-text">Delicious Diet</p>
       </header>
     </div>
+  );
+}
+
+// Home page component
+function Home() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Welcome to Delicious Diet!</h1>
+        <p>This is the home page.</p>
+      </header>
+    </div>
+  );
+}
+
+// Main App with routes
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<SplashScreen />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 
