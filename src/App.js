@@ -18,7 +18,7 @@ function SplashScreen() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p className="loading-text">Delicious Diet</p>
+        {/* <p className="loading-text">Delicious Diet</p> */}
       </header>
     </div>
   );
