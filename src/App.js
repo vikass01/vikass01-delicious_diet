@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import logo from './iconpng.png';
+import logo from './dd.png';
 import './App.css';
 
 // Splash screen component
@@ -8,8 +8,9 @@ function SplashScreen() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      window.location.href = process.env.PUBLIC_URL + '/delicious_diet.pdf';
-    }, 1000);
+      // window.location.href = process.env.PUBLIC_URL + '/delicious_diet.pdf';
+      window.location.href = "https://www.triomm.com/delicious-diet";
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 

@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -42,9 +42,9 @@
 .loading-text {
   font-size: 28px;
   font-weight: bold;
-  color: #ffffff;
+  color: #060606;
   letter-spacing: 2px;
-  animation: fadeInScale 1.5s ease-in-out infinite alternate;
+  /* animation: fadeInScale 1.5s ease-in-out infinite alternate; */
 }
 
 /* logo animation */
